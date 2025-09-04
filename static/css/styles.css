@@ -1,0 +1,822 @@
+body {
+  font-family: "Nunito";
+}
+
+#sec-1 {
+  background-image: url("../meu\ céu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 300px;
+}
+
+.logo {
+  padding-top: 25px;
+}
+
+/* ........................................nav bar css start */
+
+/* Navbar styles */
+.custom-navbar {
+  background-color: #0f111a; /* dark background similar to GitBook */
+  padding: 0.75rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #00cfff;
+}
+
+.custom-navbar .nav-link {
+  color: #d1d5db;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffffff;
+}
+
+.custom-navbar .start-btn {
+  font-weight: 600;
+  border-radius: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .start-btn:hover {
+  background-color: #00cfff;
+  color: #0f111a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .custom-navbar .start-btn {
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+.top-icon {
+  font-size: 1.73em;
+}
+
+/* ............................................................nav bar css end  */
+
+/* ..................................................hero section start */
+/* Carousel full screen setup */
+#carouselExampleInterval {
+  position: relative;
+}
+
+#carouselExampleInterval img {
+  height: 100vh; /* full screen height */
+  object-fit: cover; /* image crop adjust */
+}
+
+/* Overlay Caption */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  bottom: auto !important; /* prevent Bootstrap default bottom */
+  transform: translateY(-50%);
+  text-align: left;
+  color: #a81919;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  margin: 15px 0 25px;
+  color: #670e0e;
+}
+
+/* Buttons */
+.hero-buttons .btn {
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: transparent;
+  border: 2px solid black;
+  color: #100303;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ---------------------- */
+/* 📱 Responsive Design   */
+/* ---------------------- */
+
+/* Large Tablets / Small Laptops */
+@media (max-width: 1200px) {
+  .carousel-caption h1 {
+    font-size: 2.5rem;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  #carouselExampleInterval img {
+    height: 80vh;
+  }
+
+  .carousel-caption {
+    left: 8%;
+    right: 8%;
+    max-width: 500px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  #carouselExampleInterval img {
+    height: 70vh;
+  }
+
+  .carousel-caption {
+    top: 45%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    transform: translateY(-45%);
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.95rem;
+    margin: 10px 0 20px;
+  }
+
+  .hero-buttons .btn {
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Very Small Mobiles */
+@media (max-width: 480px) {
+  #carouselExampleInterval img {
+    height: 60vh;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.85rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+}
+/* ..........................hero section end.............. */
+
+/* ...................Feature section Start...................... */
+.icons {
+  color: #070100;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.icons:hover {
+  color: #0073ff;
+}
+
+/* ............Feature Section */
+.feature-heading {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.feature-box {
+  padding: 5%;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+#features {
+  position: relative;
+}
+
+.item {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Responsive Layout ---------- */
+@media (max-width: 992px) {
+  .feature-box {
+    flex: 1 1 calc(50% - 20px); /* 2 columns on tablets */
+    margin: 10px;
+  }
+  .feature-heading {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-box {
+    flex: 1 1 100%; /* single column on mobile */
+    margin: 10px 0;
+    padding: 30px 20px;
+  }
+  .feature-heading {
+    font-size: 1.4rem;
+  }
+  .feature-box p {
+    font-size: 0.95rem;
+  }
+}
+
+/* .................................feature section end */
+
+/* ..................................................section 3  */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#sec-3 {
+  background: url("../clouds-3.jpg") no-repeat center center/cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+#sec-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.6); /* dark overlay */
+}
+
+#sec-3 .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.sec-3-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.search-box button {
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.search-box button:hover {
+  background: #1e40af;
+}
+
+/* Card Styling */
+.card {
+  background: rgba(206, 234, 238, 0.9);
+  border-radius: 12px;
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.card h4 {
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #334155;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sec-3-heading {
+    font-size: 1.6rem;
+  }
+
+  .search-box input {
+    max-width: 100%;
+  }
+
+  .card {
+    width: 95%;
+  }
+}
+
+/* ---------- Current Weather Section ---------- */
+/* section 3 css end.........................................*/
+
+/* ................................................prediction section 4 css start  */
+
+#sec-4 {
+  background-color: #739ec9;
+}
+
+/* Section heading */
+.sec-4-heading {
+  text-align: center;
+  font-size: 3rem;
+  /* margin-top: 20px; */
+  padding-top: 40px;
+  color: #000000;
+}
+
+#sec-4 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.predict-text {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Form ko center karne ke liye */
+#weatherSearch {
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center; /* vertically center if needed */
+  margin: 20px auto;
+}
+
+/* Inner div ko fix width deni hogi */
+.predict-city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* input aur button ke beech space */
+  width: 100%;
+  max-width: 400px; /* form ki max width */
+}
+
+/* Table styling */
+.container-table100 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 40;
+  padding: 0 15px;
+}
+
+.wrap-table100 {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.table100 table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.table100 th,
+.table100 td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.table100-head th {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+.table-body tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* ....Graphs */
+/* Predicted Graph heading ko center karne ke liye */
+#predicted-graph {
+  display: block; /* strong by default inline hota hai */
+  text-align: center; /* center align */
+  font-size: 1.6rem;
+  margin: 20px auto;
+  color: #333;
+}
+
+/* Default: desktop/laptop (side by side if space hai) */
+.graphs {
+  display: flex;
+  flex-direction: row; /* side by side */
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 0 auto;
+  padding: 0 10px;
+  flex-wrap: wrap; /* agar jagah kam ho to neeche chale jaye */
+}
+
+.graphs canvas {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ✅ Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .sec-4-heading {
+    font-size: 1.6rem;
+  }
+
+  .table100 th,
+  .table100 td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .graphs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .graphs canvas {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .wrap-table100 {
+    border-radius: 8px;
+  }
+
+  .table100 th,
+  .table100 td {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .graphs canvas {
+    max-width: 450px;
+    border-radius: 8px;
+  }
+}
+
+/* section 4 css end */
+
+/* .........................................irigation section 5 css */
+
+/* Section background */
+#sec-5 {
+  background: url("../grass-2.jpg") no-repeat center center/cover;
+  position: relative;
+  padding: 60px 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #1e293b;
+  /* background: #f9fafb; */
+}
+
+#sec-5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(15, 23, 42, 0.6); dark overlay */
+}
+
+#sec-5 h1 {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 2.6rem;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* Irrigation cards container */
+#sec-5 .irrigation-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Individual cards */
+.irrigation-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.irrigation-content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.irrigation-content img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.irrigation-content h3 {
+  font-size: 1.5rem;
+  margin: 16px;
+  color: #1e40af;
+}
+
+.irrigation-content p {
+  font-size: 1rem;
+  padding: 0 16px 20px 16px;
+  color: #334155;
+}
+
+/* Prediction message */
+.sec-4-bottom {
+  text-align: center;
+  margin: 30px auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1e293b;
+  max-width: 800px;
+  background: #e0f2fe;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Project details */
+#sec-6 {
+  padding: 50px 20px;
+  text-align: center;
+  background: #040f01;
+}
+
+#sec-6 h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #f7f8fa;
+}
+
+#sec-6 p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #eeeff0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #sec-5 h1 {
+    font-size: 1.8rem;
+  }
+  .irrigation-content h3 {
+    font-size: 1.3rem;
+  }
+  .irrigation-content p {
+    font-size: 0.95rem;
+  }
+  #sec-5 .irrigation-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* .................................................irrigation section end */
+/* ............................irrigation section 6 end  */
+
+/* .........................................footer section start */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f3eb;
+}
+
+/* Instagram Images */
+.insta-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 5px;
+}
+
+.insta-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.insta-text {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.insta-text a {
+  color: #4d7b57;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #1d4b34;
+  color: #fff;
+  position: relative;
+  padding: 40px 20px 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.newsletter button {
+  background: #f8f3eb;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  padding: 3px;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+  .social-icons {
+    text-align: center;
+  }
+}
+
+/* .............................footer section 8 start */

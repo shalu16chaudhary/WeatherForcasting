@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="sec-3" class="background-tint-1">
+      <section class="vh-100">
+        <div class="container py-4 h-100">
+          <div class="row d-flex justify-content-center align-items-center">
+            <h1 class="mb-4 sec-3-heading">Check the weather forecast</h1>
+            <div class="col-md-8 col-lg-6 col-xl-4">
+              <form
+                name="city search"
+                id="weatherSearch"
+                action="{{ url_for('home') }}"
+                method="post"
+                novalidate
+              >
+                <div class="search-box">
+                  <input
+                    type="search"
+                    name="city"
+                    class="form-control"
+                    placeholder="Enter City Name"
+                    aria-label="Search"
+                  />
+                  <button type="submit" class="btn btn-primary" id="searchCity">
+                    Check
+                  </button>
+                </div>
+              </form>
+
+              <div class="card shadow-0 border">
+                <div class="card-body p-4">
+                  {% if status: %}
+                  <h4 class="mb-3 sfw-normal">{{ city }}, {{ country }}</h4>
+                  <p class="mb-2">
+                    Current temperature: <strong>{{ current_temp }}°C</strong>
+                  </p>
+                  <p>Feels like: <strong>{{ feels_like }}°C</strong></p>
+                  <p>
+                    Max: <strong>{{ temp_max }}°C</strong>, Min:
+                    <strong>{{ temp_min }}°C</strong>
+                  </p>
+                  <p>Humidity: <strong>{{ humidity }} %</strong></p>
+
+                  <div class="d-flex flex-row align-items-center">
+                    <p class="mb-0 me-4">{{ description }}</p>
+                    {% else: %}
+                    <h4 class="mb-3 sfw-normal">Your City</h4>
+                    <p class="mb-2">Current temperature: -<strong>-</strong></p>
+                    <p>Feels like: -<strong>-</strong></p>
+                    <p>Max: <strong>-</strong> Min: <strong>-</strong></p>
+                    <p>Humidity: -</p>
+
+                    <div class="d-flex flex-row align-items-center">
+                      <p class="mb-0 me-4">Status Unknown</p>
+                      {% endif %}
+                      <i class="fas fa-cloud fa-3x" style="color: #eee"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

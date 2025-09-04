@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% if humidity_1 is defined and humidity_1 >= 75 %}
+    <h4 class="sec-4-bottom">
+      According to predicted data, it may rain in the next hour. so it is not
+      advisable to irrigate your field
+    </h4>
+    {% elif humidity_2 is defined and humidity_2 >=75 %}
+    <h4 class="sec-4-bottom">
+      According to predicted data, it may rain in the next 2 hours. so it is not
+      advisable to irrigate your field
+    </h4>
+    {% elif humidity_3 is defined and humidity_3 >= 75 %}
+    <h4 class="sec-4-bottom">
+      According to predicted data, it may rain in the next 3 hours. so it is not
+      advisable to irrigate your field
+    </h4>
+    {% elif humidity_4 is defined and humidity_4 >= 75 %}
+    <h4 class="sec-4-bottom">
+      According to predicted data, it may rain in the next 4 hours. so irrigate
+      your field accordingly
+    </h4>
+    {% elif humidity_5 is defined and humidity_5 >= 75 %}
+    <h4 class="sec-4-bottom">
+      According to predicted data, it may rain in the next 5 hours. so irrigate
+      your field accordingly
+    </h4>
+    {% else %}
+    <h4 class="sec-4-bottom">
+      According to predicted data, it may not rain in the next 5 hours. so
+      irrigate your field accordingly
+    </h4>
+    {% endif %}
+    <!-- irrigation method -->
+
+    <section id="sec-5" class="background-tint-2">
+      <h1 id="sec-5-heading">Irrigation Methods</h1>
+
+      <!-- first irrigation technique -->
+      <div class="irrigation-container">
+        <div class="irrigation-content">
+          <img
+            class="drip-image"
+            src="../static/surface.jpg"
+            alt="surface-irrigation"
+            width="600"
+            height="400"
+          />
+          <h3 class="drip-irrigation">Surface Irrigation</h3>
+          <p>
+            <b>How it works:</b>
+            Water is applied to the land and allowed to flow over the soil's
+            surface by gravity.
+            <br />
+            <b>Methods:</b> Includes furrow, strip, and border irrigation, where
+            water moves through trenches or channels between crop rows.
+            <br />
+            <b>Pros: </b>Cost-effective and suitable for large areas.
+            <br />
+            <b>Cons: </b>Less efficient and can lead to significant water loss.
+          </p>
+        </div>
+        <!-- second irrigation technique -->
+
+        <div class="irrigation-content">
+          <img
+            class="sprinkler-image"
+            src="../static/sprinkle.jpg"
+            alt="sprinkler-irrigation"
+            width="600"
+            height="400"
+          />
+          <h3 class="drip-irrigation">Sprinkler Irrigation</h3>
+          <p>
+            <b>How it works:</b>
+            Water is sprayed through overhead sprinklers, simulating natural
+            rainfall.
+            <br />
+            <b>Methods:</b> Includes fixed or moving sprinkler systems, such as
+            the large circular pattern of Center Pivot Irrigation.
+            <br />
+            <b>Pros: </b>Suitable for various soil types and climates,
+            delivering water efficiently.
+            <br />
+            <b>Cons: </b>Can be energy-intensive and prone to wind drift.
+          </p>
+        </div>
+        <!-- third irrigation technique -->
+        <div class="irrigation-content">
+          <img
+            class="sprinkler-image"
+            src="../static/drip.jpg"
+            alt="drip-irrigation"
+            width="600"
+            height="400"
+          />
+          <h3 class="drip-irrigation">Drip Irrigation</h3>
+          <p>
+            <b>How it works:</b>
+            Water is delivered in small drops directly to the plant roots.
+            <br />
+            <!-- <b>Methods:</b> Includes furrow, strip, and border irrigation, where
+          water moves through trenches or channels between crop rows. -->
+
+            <b>Pros: </b>Extremely efficient, conserves water, and delivers
+            nutrients directly to plants.
+            <br />
+            <b>Cons: </b>Requires higher initial investment and more
+            maintenance.
+          </p>
+        </div>
+        <!-- fourth irrigation technique -->
+        <div class="irrigation-content">
+          <img
+            class="sprinkler-image"
+            src="../static/subsurface.jpg"
+            alt="subsurface-irrigation"
+            width="600"
+            height="400"
+          />
+          <h3 class="drip-irrigation">Subsurface Irrigation</h3>
+          <p>
+            <b>How it works:</b>
+            The water table is artificially raised from below to provide
+            moisture to the root zone.
+            <!-- <br />
+          <b>Methods:</b> Includes furrow, strip, and border irrigation, where
+          water moves through trenches or channels between crop rows. -->
+            <br />
+            <b>Pros: </b>Pros: Prevents surface evaporation and is useful in
+            some environments.
+            <br />
+            <b>Cons: </b>Only suitable where groundwater levels are controllable
+            and high.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-6">
+      <h2>Project Details</h2>
+      <p>
+        This project uses a machine learning model to predict the next five
+        hours of weather and provide real-time data of your area. It also guides
+        farmers on whether irrigation is needed and shares efficient irrigation
+        methods for better water management.
+      </p>
+    </section>
+  </body>
+</html>

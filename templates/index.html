@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather App</title>
+    <link rel="icon" href="../static/weather.png" />
+
+    <!-- Bootstrap -->
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/css/styles.css" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9df87047e7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    {% include 'partials/navbar.html' %}
+
+    <!-- ............hero section.......... -->
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <!-- Image 1 -->
+        <div class="carousel-item active" data-bs-interval="5000">
+          <img
+            src="{{ url_for('static', filename='Sunny.jpg') }}"
+            class="d-block w-100"
+            alt="Weather Image 1"
+          />
+        </div>
+        <!-- Image 2 -->
+        <div class="carousel-item" data-bs-interval="5000">
+          <img
+            src="{{ url_for('static', filename='Rainy.jpg') }}"
+            class="d-block w-100"
+            alt="Weather Image 2"
+          />
+        </div>
+        <!-- Image 3 -->
+        <div class="carousel-item" data-bs-interval="5000">
+          <img
+            src="{{ url_for('static', filename='Thunderstrom.jpg') }}"
+            class="d-block w-100"
+            alt="Weather Image 3"
+          />
+        </div>
+        <!-- Image 4 -->
+        <div class="carousel-item" data-bs-interval="5000">
+          <img
+            src="{{ url_for('static', filename='winter.jpg') }}"
+            class="d-block w-100"
+            alt="Weather Image 4"
+          />
+        </div>
+        <!-- Image 5 -->
+        <div class="carousel-item" data-bs-interval="5000">
+          <img
+            src="{{ url_for('static', filename='Spring.jpg') }}"
+            class="d-block w-100"
+            alt="Weather Image 5"
+          />
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- Overlay Text -->
+      <div
+        class="carousel-caption d-flex flex-column justify-content-center align-items-start text-start"
+      >
+        <h1 class="display-4 fw-bold">WEATHER FORECAST</h1>
+        <p class="lead">
+          Get the latest weather updates and forecasts for your location.
+        </p>
+        <div class="hero-buttons mt-3">
+          <a href="#sec-2" class="btn btn-primary me-2">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ............hero section.......... -->
+
+    <!-- .................Feature section.................. -->
+    <section id="sec-2">
+      <div class="row container-fluid">
+        <div class="feature-box col-lg-4">
+          <i class="icons fa-solid fa-cloud fa-4x"></i>
+          <a href="#sec-3" class="item"
+            ><h3 class="feature-heading">Current Weather</h3></a
+          >
+          <p>Check weather in your city</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icons fa-sharp fa-solid fa-chart-column fa-4x"></i>
+          <a href="#sec-4" class="item"
+            ><h3 class="feature-heading">Weather Prediction</h3></a
+          >
+          <p>Predict weather for the next 5 hours in your city</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icons fa-solid fa-seedling fa-4x"></i>
+          <a href="#sec-5" class="item"
+            ><h3 class="feature-heading">Irrigation Methods</h3></a
+          >
+          <p>Know more about methods of crop irrigation and its details</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- section 3  -->
+    {% include 'partials/current_weather.html' %}
+
+    <!-- section 4 -->
+    {% include 'partials/prediction.html' %}
+
+    <!-- section 5 -->
+    {% include 'partials/irrigation.html' %} 
+    
+    {% include 'partials/footer.html'%}
+
+    <!-- External JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Chart.js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"
+    ></script>
+    <!-- custom.js -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="sec-4">
+      <h1 class="sec-4-heading"><strong>Weather Prediction</strong></h1>
+      <h4 class="predict-text">
+        Enter your city below to predict the weather of your location for next 5
+        hours
+      </h4>
+      <form
+        name="city search"
+        id="weatherSearch"
+        action="{{ url_for('prediction') }}"
+        method="post"
+        novalidate
+      >
+        <div class="predict-city">
+          <input
+            type="search"
+            name="city"
+            class="form-control rounded"
+            placeholder="Enter City Name"
+            aria-label="Search"
+          />
+          <button type="submit" class="btn btn-primary" id="searchCity">
+            Predict
+          </button>
+        </div>
+      </form>
+
+      {% if predict_status: %}
+      <div class="container-table100">
+        <div class="wrap-table100">
+          <div class="table100">
+            <table>
+              <thead>
+                <tr class="table100-head">
+                  <th class="column1">Time</th>
+                  <th class="column2">Temperature</th>
+                  <th class="column3">Humidity</th>
+                </tr>
+              </thead>
+
+              <tbody class="table-body">
+                <tr>
+                  <td class="column1">After 1 hour</td>
+                  <td class="column2">{{ temperature_1 }} °C</td>
+                  <td class="column3">{{ humidity_1 }} %</td>
+                </tr>
+                <tr>
+                  <td class="column1">After 2 hours</td>
+                  <td class="column2">{{ temperature_2 }} °C</td>
+                  <td class="column3">{{ humidity_2 }} %</td>
+                </tr>
+                <tr>
+                  <td class="column1">After 3 hours</td>
+                  <td class="column2">{{ temperature_3 }} °C</td>
+                  <td class="column3">{{ humidity_3 }} %</td>
+                </tr>
+                <tr>
+                  <td class="column1">After 4 hours</td>
+                  <td class="column2">{{ temperature_4 }} °C</td>
+                  <td class="column3">{{ humidity_4 }} %</td>
+                </tr>
+                <tr>
+                  <td class="column1">After 5 hours</td>
+                  <td class="column2">{{ temperature_5 }} °C</td>
+                  <td class="column3">{{ humidity_5 }} %</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Predicted Graphs -->
+      <h3 class="sec-4-content">
+        <strong id="predicted-graph">Predicted Graphs</strong>
+      </h3>
+      <div class="graphs">
+        <canvas id="tlineChart" width="700" height="400"></canvas>
+        <canvas id="hlineChart" width="700" height="400"></canvas>
+      </div>
+
+      <!-- JS Libraries -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="{{ url_for('static', filename='script.js') }}"></script>
+      {% endif %}
+    </section>
+  </body>
+</html>
